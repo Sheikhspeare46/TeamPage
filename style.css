@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #e1e1e1;
+  font-family: "Merriweather";
+  font-size: 1.5em; /* Increased base font size */
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1800px; /* 1200px * 1.5 */
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 375px; /* 250px * 1.5 */
+  margin: 30px; /* 20px * 1.5 */
+}
+
+.container {
+  height: 468px; /* 312px * 1.5 */
+  width: 600px; /* 400px * 1.5 */
+  cursor: pointer;
+  transform: scale(0.72); /* 0.48 * 1.5 */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle {
+  position: absolute;
+  background: var(--color);
+  height: 570px; /* 380px * 1.5 */
+  width: 570px; /* 380px * 1.5 */
+  top: 315px; /* 210px * 1.5 */
+  left: 15px; /* 10px * 1.5 */
+  border-radius: 50%;
+}
+
+.person img {
+  position: relative;
+  width: 510px; /* 340px * 1.5 */
+  top: 246px; /* 164px * 1.5 */
+  left: 33px; /* 22px * 1.5 */
+  transform: translateY(30px) scale(1.15);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-inner {
+  position: relative;
+  clip-path: path("M 585,600 C 585,757.40115 457.40115,885 300,885 142.59885,885 15,757.40115 15,600 V 15 H 300 585 Z"); /* Adjusted */
+  top: -300px; /* -200px * 1.5 */
+}
+
+.divider {
+  height: 4.5px; /* 3px * 1.5 */
+  width: 195px; /* 130px * 1.5 */
+  border-radius: 5px;
+  background: var(--color);
+}
+
+.person h1 {
+  color: #464646;
+  margin: 24px 0 0 0; /* 16px * 1.5 */
+}
+
+.person p {
+  font-family: arial;
+  color: #6e6e6e;
+  font-size: 21px; /* 14px * 1.5 */
+  margin-top: 7.5px; /* 5px * 1.5 */
+}
+
+/* hover */
+.container:hover {
+  transform: scale(0.81); /* 0.54 * 1.5 */
+}
+
+.container:hover img {
+  transform: translateY(0) scale(1.3);
+}
